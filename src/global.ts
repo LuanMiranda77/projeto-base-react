@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 :root{
+  //variaveis do tema de cores
   --background: #F2F2F2;
   --primary: #62A9A5;
   --secondary: #F47C1A;
@@ -10,15 +11,15 @@ export const GlobalStyle = createGlobalStyle`
   --green: #1ABC9C;
   --red: #E74C3C;
   --white: #FFFFFF;
-  --blue:#2C73D2
-
-
+  --blue:#2C73D2;
 }
+
 *{
   margin:0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html{
   @media (max-width: 1080px){
     font-size: 18px;
@@ -27,20 +28,25 @@ html{
     font-size: 14px;
   }
 }
+
 body {
   background: var(--background);
   -webkit-font-smoothing: antialiased;
 }
+
 body, input, textarea, button{
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
+
 h1,h2,h3,h4,h5,h6 strong{
   font-weight: 700;
 }
+
 button {
   cursor: pointer;
 }
+
 [disabled]{
   opacity: 0.6;
   cursor: not-allowed;
@@ -57,6 +63,13 @@ button {
   align-items: center;
   justify-content: center;
 
+}
+
+.card-local{
+  background: var(--white);
+  margin: 2%;
+  border-radius: 5px;
+  padding:1rem;
 }
 
 .react-modal-content{

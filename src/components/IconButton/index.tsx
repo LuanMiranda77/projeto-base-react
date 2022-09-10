@@ -1,7 +1,10 @@
 import React from 'react';
 import { Container } from './styles';
-import { FaBeer } from 'react-icons/fa';
-import { AiFillEye } from "react-icons/ai";
+import { BsFillQuestionDiamondFill } from 'react-icons/bs';
+import { BsFillPencilFill } from "react-icons/bs";
+import {BsPlusLg} from "react-icons/bs";
+import {BsSearch} from "react-icons/bs";
+import {BsTrashFill} from 'react-icons/bs';
 
 interface IconButtonProps{
   icon:string,
@@ -9,10 +12,16 @@ interface IconButtonProps{
 
 export const IconButton: React.FC< IconButtonProps> = (porps) => {
   const setIcon=()=>{
-    if(porps.icon === 'beer'){
-      return <FaBeer />
-    }else{
-      return <AiFillEye />
+    if(porps.icon === 'new'){
+      return <BsPlusLg className='new' />
+    }else if(porps.icon === 'remove'){
+      return <BsTrashFill className='remove' />
+    }else if(porps.icon === 'edit'){
+      return <BsFillPencilFill className='edit' />
+    }else if(porps.icon === 'info' ){
+      return <BsFillQuestionDiamondFill className='info' />
+    }else if(porps.icon === 'search' ){
+      return <BsSearch  className='search'/>
     }
   };
   return <Container>

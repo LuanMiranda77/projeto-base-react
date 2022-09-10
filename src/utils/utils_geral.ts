@@ -1,7 +1,7 @@
 import { IUser } from '../types/user';
 import { logout } from "../service/auth";
 
-export class Utils {
+export class UtilsGeral {
 
     /**
      * @params de type = 'success', 'error', 'info','warn'

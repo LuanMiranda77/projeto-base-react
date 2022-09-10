@@ -64,7 +64,7 @@ module.exports = (plop) => {
       {
         type: 'input',
         name: 'name',
-        message: 'Digite o nome do Component? Ex.: nomeModulo/NomeModulo',
+        message: 'Digite o nome do Component? Ex.: nameComponent/NameComponent',
       },
     ],
     actions: [
@@ -94,7 +94,7 @@ module.exports = (plop) => {
       {
         type: 'input',
         name: 'name',
-        message: 'Digite o nome do Component? Ex.: nomePage/NomePage',
+        message: 'Digite o nome da pagina e seu modulo? Ex.: NomePage/nomeModulo',
       },
     ],
     actions: [
@@ -103,26 +103,26 @@ module.exports = (plop) => {
       '------------------------------',
       {
         type: 'add',
-        path: '../src/pages/{{pascalCase (getName name)}}/index.tsx',
+        path: '../src/module/{{lowerCase (getName name)}}/pages/{{pascalCase (getPasta name)}}/index.tsx',
         templateFile: 'templates/page.tsx.hbs',
         force: true,
 
       },
       {
         type: 'add',
-        path: '../src/pages/{{pascalCase (getName name)}}/styles.ts',
+        path: '../src/module/{{lowerCase (getName name)}}/pages/{{pascalCase (getPasta name)}}/styles.ts',
         templateFile: 'templates/style-page.ts.hbs',
       },
-      {
-        type: 'add',
-        path: '../src/stores/{{pascalCase (getName name)}}Store.ts',
-        templateFile: 'templates/store-page.ts.hbs',
-      },
-      {
-        type: 'add',
-        path: '../src/services/{{pascalCase (getName name)}}Service/{{getPasta name}}Service.ts',
-        templateFile: 'templates/service-page.ts.hbs',
-      },
+      // {
+      //   type: 'add',
+      //   path: '../src/stores/{{pascalCase (getName name)}}Store.ts',
+      //   templateFile: 'templates/store-page.ts.hbs',
+      // },
+      // {
+      //   type: 'add',
+      //   path: '../src/services/{{pascalCase (getName name)}}Service/{{getPasta name}}Service.ts',
+      //   templateFile: 'templates/service-page.ts.hbs',
+      // },
       {
         type: 'append',
         path: '../src/routes.tsx',
