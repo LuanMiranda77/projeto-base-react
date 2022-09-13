@@ -15,7 +15,7 @@ const Routes: React.FC = () => {
   return (
     <Router>
       <Suspense
-        fallback={<div className="p-flex p-text-center p-mt-5 p-t-5"></div>}
+        fallback={<div className="p-flex p-text-center p-mt-5 p-t-5">Carregando....</div>}
       >
         <Rotas>
           <Route path="/" element={<Login />} />

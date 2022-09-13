@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  background: var(--white);
-  align-items: center;
-  margin: 5% auto;
-  width:50%;
-  border-radius: 5px;
-  padding: 0 1rem 1rem;
+
+  display:flex;
+  margin: 0;
+  
  
-    @media (max-width: 720px){
+  @media (max-width: 720px){
         width:100%;
         margin: 0 auto;
         
@@ -31,6 +29,29 @@ export const Container = styled.header`
     color: var(--text-title);
     /* padding: 3 1rem 10rem; */
    }
+
+   .div-left{
+      background: var(--bacground);
+      align-items: center;
+      margin-top: 5%;
+      width:50%;
+      border-radius: 10px;
+      padding: 0 1rem 1rem;
+      /* height: 89vh; */
+   }
+
+   .div-right{
+      background: var(--primary);
+      align-items: center;
+      text-align: center;
+      color: white;
+      width:50%;
+      border-radius: 5px;
+      padding: 1rem;
+      height: 100vh;
+      box-shadow: 0px 2px 5px 5px silver;
+   }
+   
   .div-login{
     width:50%;
     margin-right: -2rem;
