@@ -3,15 +3,24 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 :root{
   //variaveis do tema de cores
-  --background: #F2F2F2;
+  --background: #1C1C1C;
   --primary: #62A9A5;
   --secondary: #F47C1A;
-  --orange:#F14F0D;
-  --text-title: #949494;
+  --basic-color:#4B0082;
   --green: #1ABC9C;
   --red: #E74C3C;
   --white: #FFFFFF;
   --blue:#2C73D2;
+  --black:#1C1C1C;
+
+  //variaveis de textos
+  --text-title: #949494;
+  --text-label: #A9A9A9;
+  --text-label-black: #1C1C1C;
+
+
+  //variaveis de tamanho
+  --max-height-button:40px;
 }
 
 *{

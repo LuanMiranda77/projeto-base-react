@@ -3,13 +3,18 @@ import { Container } from './styles';
 
 interface ButtonBaseProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   //adicionar os props
+  model:"btn_base" | "btn_line" | "btn_super";
   label:string;
-  model:string;
-
+  size?:"large" | "medium" | "small" | "mini";
 }
 
 export const ButtonBase: React.FC< ButtonBaseProps> = (props) => {
   return <Container>
-            <button id={props.label} name={props.label} className={props.model+" "+props.className}>{props.label}</button>
+            <button id={props.label} name={props.label} className={props.model+" "+(props.className ? props.className:'btn_base')+" "+(props.size ? props.size:'large')}>{props.label}</button>
          </Container>;
+}
+
+ButtonBase.defaultProps = {
+  model:"btn_base" ,
+  size:"mini",
 }

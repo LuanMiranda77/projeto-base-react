@@ -1,0 +1,27 @@
+import {Meta,Canvas,Story,ArgsTable} from '@storybook/addon-docs/blocks';
+import {IconButton} from '../IconButton';
+
+<Meta title="Components/Buttons" component={IconButton}/>
+
+# IconButton
+
+#Aqui vai a descrição do botão e você pode escrever o que achar melhor.
+<Canvas>
+  <Story
+    name="IconButton"
+    args={{ 
+        ...IconButton.defaultProps,
+        icon:'new',
+        
+    }}
+  >
+    {(args) => <IconButton  {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable of={IconButton} />
+
+
+
+
+

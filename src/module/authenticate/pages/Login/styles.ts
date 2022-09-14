@@ -33,7 +33,7 @@ export const Container = styled.header`
    .div-left{
       background: var(--bacground);
       align-items: center;
-      margin-top: 5%;
+      margin-top: 3%;
       width:50%;
       border-radius: 10px;
       padding: 0 1rem 1rem;

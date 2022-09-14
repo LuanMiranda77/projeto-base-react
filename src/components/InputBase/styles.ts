@@ -1,4 +1,3 @@
-import { Primary, Secondary } from './../../stories/Button.stories';
 import styled from "styled-components";
 
 export const Container  = styled.div`

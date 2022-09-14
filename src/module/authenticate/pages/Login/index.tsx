@@ -18,7 +18,7 @@ function Login() {
           {/* <button type="button">Increva-se</button> */}
         </div>
         <div style={{width:"100%", textAlign:"center"}}>
-          <ButtonBase label="entrar" model="btn"/>
+          <ButtonBase label="ENTRAR" model="btn_base" className="black-color" size="small" />
         </div>
         </div>
       </div>

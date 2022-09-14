@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ButtonHTMLAttributes} from 'react';
 import { Container } from './styles';
 import { BsFillQuestionDiamondFill } from 'react-icons/bs';
 import { BsFillPencilFill } from "react-icons/bs";
@@ -6,8 +6,8 @@ import {BsPlusLg} from "react-icons/bs";
 import {BsSearch} from "react-icons/bs";
 import {BsTrashFill} from 'react-icons/bs';
 
-interface IconButtonProps{
-  icon:string,
+interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
+  icon:"new" |"remove" | "info"|"edit" |"search";
 }
 
 export const IconButton: React.FC< IconButtonProps> = (porps) => {
@@ -27,4 +27,8 @@ export const IconButton: React.FC< IconButtonProps> = (porps) => {
   return <Container>
            {setIcon()}
          </Container>;
+}
+
+IconButton.defaultProps={
+  icon:"new"
 }
