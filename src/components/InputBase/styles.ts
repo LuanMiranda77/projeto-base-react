@@ -126,12 +126,10 @@ export const Container  = styled.div`
     top: 0;
     /* padding: calc(.4em * 0.75) calc(.4em * .5); */
     margin: calc(.4em * 0.75 - 25px) calc(.4em * .5);
-    background: pink;
     white-space: nowrap;
     transform: translate(0, 0);
     color: var(--text-title);
     transform-origin: 0 0;
-    background: var(--white);
     transition: transform 120ms ease-in;
     font-weight: bold;
     line-height: 1.2;

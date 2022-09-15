@@ -30,5 +30,6 @@ export const IconButton: React.FC< IconButtonProps> = (porps) => {
 }
 
 IconButton.defaultProps={
-  icon:"new"
+
+  
 }

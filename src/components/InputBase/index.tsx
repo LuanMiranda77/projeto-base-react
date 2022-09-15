@@ -4,7 +4,7 @@ import { Container } from "./styles";
 interface InputBaseProps extends InputHTMLAttributes<HTMLInputElement> {
   //adicionar os props
   type: string;
-  model: string;
+  model: "input_base"|"input_line"|"input_super";
   label: string;
 }
 

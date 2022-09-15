@@ -1,26 +1,35 @@
 import {Meta,Canvas,Story,ArgsTable} from '@storybook/addon-docs/blocks';
+import Login from '../Login'
+import RecuperaSenha from '../RecuperaSenha'
 
-<Meta title="Pages/Buttons" component={ButtonBase}/>
+<Meta title="Modulos/authenticate/pages" component={Login}/>
 
-# ButtonBase
+<div>
+<h1>Tela de autentiação</h1>
 
-#Aqui vai a descrição do botão e você pode escrever o que achar melhor.
+<br/>
+</div>
+__• Descrição:__
+
+
+
 <Canvas>
   <Story
-    name="ButtonBase"
-    args={{ 
-        ...ButtonBase.defaultProps,
-        model:'btn_base',
-        label:'Entre', 
-        size:'small',
-        className:'primary-color'
-    }}
+    name="Login"
+   
   >
-    {(args) => <ButtonBase  {...args} />}
+    {(args) => <Login  {...args} />}
+  </Story>
+  <Story
+    name="Recupera Senha"
+   
+  >
+    {(args) => <RecuperaSenha  {...args} />}
   </Story>
 </Canvas>
 
-<ArgsTable of={ButtonBase} />
+<ArgsTable of={Login} />
+<ArgsTable of={RecuperaSenha} />
 
 
 

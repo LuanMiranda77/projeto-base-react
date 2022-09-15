@@ -1,11 +1,20 @@
 import {Meta,Canvas,Story,ArgsTable} from '@storybook/addon-docs/blocks';
 import {ButtonBase} from '../ButtonBase';
 
-<Meta title="Components/Buttons" component={ButtonBase}/>
+<Meta title="{{lowerCase (getName name)}}/pages/{{pascalCase (getPasta name)}}" parameters={{
+    actions: {
+      handles: ['mouseover', 'click .btn'],
+    },
+  }}  component={ButtonBase}/>
 
-# ButtonBase
+# 🔘→ButtonBase
+_________
 
-#Aqui vai a descrição do botão e você pode escrever o que achar melhor.
+__Description:__
+
+Botão de basicos do projeto que podem ser alterados no compomente __ButtonBase__
+_________
+
 <Canvas>
   <Story
     name="ButtonBase"

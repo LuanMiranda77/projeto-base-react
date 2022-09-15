@@ -15,6 +15,5 @@ export const ButtonBase: React.FC< ButtonBaseProps> = (props) => {
 }
 
 ButtonBase.defaultProps = {
-  model:"btn_base" ,
   size:"mini",
 }
