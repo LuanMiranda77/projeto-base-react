@@ -22,5 +22,8 @@
   },
   "include": [
     "src"
-, "generators"  ]
+, "generators"  ],
+    "files":[
+      "src/styles/styled.d.ts"
+    ]
 }

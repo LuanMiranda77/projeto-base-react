@@ -83,6 +83,11 @@ module.exports = (plop) => {
         path: '../src/components/{{pascalCase (getName name)}}/styles.ts',
         templateFile: 'templates/style-component.ts.hbs',
       },
+      {
+        type: 'add',
+        path: '../src/components/{{pascalCase (getName name)}}/{{lowerCase (getName name)}}.stories.mdx',
+        templateFile: 'templates/stories-page.ts.hbs',
+      },
       '--------------------------------------------------',
       '🤲 Componente gerando com sucesso! Luan é foda 🤲',
       '--------------------------------------------------',
