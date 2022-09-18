@@ -8,14 +8,17 @@ import {ThemeContext} from 'styled-components'
 interface Props{
   //adicionar os props
   alterTheme():void;
+  children: React.ReactNode;
 }
 
-export const Layout: React.FC <Props> = ({alterTheme}) => {
+export const Layout: React.FC <Props> = (props) => {
   const {colors, title} = useContext(ThemeContext);
   
   return <Grid >
-            <MainHeader alterTheme={alterTheme}/>
+            <MainHeader alterTheme={props.alterTheme}/>
             <Aside/>
-            <Content/>
+            <Content>
+                {props.children}
+            </Content>
          </Grid>;
 }

@@ -1,8 +1,12 @@
-import React from 'react';
+import React  from 'react';
 import { Container } from './styles';
 
-export const Content: React.FC = () => {
+interface Props{
+  children: React.ReactNode;
+}
+
+export const Content: React.FC<Props> = ({children}) => {
   return <Container>
-            <h1>CT</h1>
+            {children}
          </Container>;
 }

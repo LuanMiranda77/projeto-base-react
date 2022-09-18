@@ -2,7 +2,8 @@
 export let TOKEN_KEY = null;
 
 
-export const isAuthenticated = () => localStorage.getItem(TOKEN_KEY) !== null;
+// export const isAuthenticated = () => localStorage.getItem(TOKEN_KEY) !== null;
+export const isAuthenticated = () => true;
 
 
 export const getToken = () => localStorage.getItem(TOKEN_KEY);
@@ -16,5 +17,4 @@ export const login = token => {
 export const logout = () => {
   TOKEN_KEY = null;
   localStorage.removeItem(TOKEN_KEY);
-  console.log("aqyui");
 };

@@ -1,8 +1,14 @@
 import React from 'react';
-import { Container } from './styles';
+import { Logo } from '../Logo';
+import { Container, Header, MenuContainer } from './styles';
 
 export const Aside: React.FC = () => {
   return <Container>
-            <h1>AS</h1>
+            <Header style={{justifyContent:"center", alignItems:'center'}}>
+              <Logo size='LARGE'/>
+            </Header>
+            <MenuContainer>
+              menu aqui
+            </MenuContainer>
          </Container>;
 }

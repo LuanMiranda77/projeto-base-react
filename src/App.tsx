@@ -1,25 +1,14 @@
 import { GlobalStyle } from "./styles/globalStyle";
-import userPersistState from './utils/userPersistState';
-import Routes from "./routes";
-import {Layout} from "./components/Layout";
-import {ThemeProvider, DefaultTheme} from 'styled-components';
-import dark from './styles/themes/dark';
-import light from './styles/themes/light';
-import roxo from './styles/themes/roxo';
+import Routes from "./routes/index";
+import {ThemeProvider} from 'styled-components';
+import {ThemeContext} from './hooks/theme';
+
 
 function App() {
-  const [theme, setTheme] = userPersistState<DefaultTheme>("theme", light);
-
-  const alterTheme = () => {
-    setTheme(
-      theme.title === 'dark'? light :
-      theme.title === 'light' ? dark : roxo
-    );
-  }
+  const root = ThemeContext.ThemeProvider();
   return (
-    <ThemeProvider theme={theme}>
-      <Routes />
-      <Layout alterTheme={alterTheme}/>
+    <ThemeProvider theme={root.theme}>
+      <Routes setDefaultTheme={root.setDefaultTheme}/>
       <GlobalStyle />
     </ThemeProvider>
   )

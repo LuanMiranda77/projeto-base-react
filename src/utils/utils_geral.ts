@@ -1,5 +1,6 @@
-import { IUser } from '../types/user';
+import { IUserAplication } from '../types/user_aplication';
 import { logout } from "../service/auth";
+import userPersistState from './userPersistState';
 
 export class UtilsGeral {
 
@@ -17,16 +18,16 @@ export class UtilsGeral {
         return ['🤑', '😀', '😱', '😰', '😥'];
     }
 
-    public static geraTokenLogin(user: IUser){
-        let key = this.encrypt(this.geraStringAleatoria(10)+'&'+user.nome+'&'+this.geraStringAleatoria(20)+'&'+user.role+'&'+this.geraStringAleatoria(15)+'&'+user.id+"&"+this.geraStringAleatoria(5)+'&'+user.status+"&"+this.geraStringAleatoria(8));
-        localStorage.setItem("p-text-left", key);
+    public static setTokenLogin(user: IUserAplication){
+        let key = this.encrypt(this.geraStringAleatoria(10)+'&'+user.nome+'&'+this.geraStringAleatoria(20)+'&'+user.typeRole+'&'+this.geraStringAleatoria(15)+'&'+user.id+"&"+this.geraStringAleatoria(5)+'&'+user.status+"&"+this.geraStringAleatoria(8));
+        localStorage.setItem("@TOKEN_KEY", key);
     }
 
     public static getTokenLogin(){
-        let key = localStorage.getItem("p-text-left");
+        let key = localStorage.getItem("@TOKEN_KEY");
         if(key != null){
             const array = this.decrypt(key).split('&');
-            const userLogado: IUser={
+            const userLogado: IUserAplication={
                 id: Number(array[5]),
                 nome: array[1], 
                 email:'', 
@@ -34,7 +35,8 @@ export class UtilsGeral {
                 dataAtualizacao: null, 
                 status: 'ATIVO', 
                 password: '', 
-                role: array[3]
+                typeRole:array[4],
+                // role: Number(array[3])
             } 
             return userLogado;
         }
