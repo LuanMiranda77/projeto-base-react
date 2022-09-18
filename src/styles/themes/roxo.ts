@@ -7,6 +7,8 @@ export default{
         secondary:'#483D8B',
         tertiary:'#6A5ACD',
 
+        background:'#dedee0',
+
         white: '#FFF',
         black: '#1C1C1C',
         gray: '#D2D2D2',

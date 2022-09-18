@@ -3,9 +3,11 @@ export default{
     title: 'light',
 
     colors:{
-        primary:'#696969',
-        secondary:'#fff',
-        tertiary:'#DCDCDC',
+        primary:'#12486c',
+        secondary:'#1a7aad',
+        tertiary:'#20aed8',
+
+        background:'#FFF',
 
         white: '#FFF',
         black: '#1C1C1C',

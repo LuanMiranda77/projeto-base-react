@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container  = styled.div`
     //adicionar stylos
     grid-area: CT;
+    background:${props => props.theme.colors.background};
 
 @media screen and (max-width: 40em) {
     //adicionar o stylo responsivo

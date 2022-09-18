@@ -6,7 +6,7 @@ type Response<T> = [
     Dispatch<SetStateAction<T>>,
 ];
 
-function usePersistState<T>(key: string, initialState: any) : Response<T> {
+function usePersistState<T>(key: string, initialState: T) : Response<T> {
     const [state, setState] = useState(()=>{
         const localStorageValue = localStorage.getItem(key);
         if(localStorageValue){

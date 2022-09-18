@@ -14,7 +14,7 @@ export const Layout: React.FC <Props> = ({alterTheme}) => {
   const {colors, title} = useContext(ThemeContext);
   
   return <Grid >
-            <MainHeader/>
+            <MainHeader alterTheme={alterTheme}/>
             <Aside/>
             <Content/>
          </Grid>;
