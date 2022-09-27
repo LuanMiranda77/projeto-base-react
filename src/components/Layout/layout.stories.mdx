@@ -1,7 +1,11 @@
 import {Meta,Canvas,Story,ArgsTable} from '@storybook/addon-docs/blocks';
-import Content from '../Content';
+import Layout from '../Layout';
+import {ThemeProvider} from 'styled-components';
+import {ThemeContext} from './hooks/theme';
 
-<Meta title="Components/Buttons" component={ Content }/>
+
+<Meta title="Components/Layout" component={ Layout }/>
+
 
 # 🔘→Content
 _________
@@ -13,11 +17,14 @@ _________
 
 <Canvas>
   <Story
-    name="Content"
-    args=""
+    name="Layout"
+     args={{ 
+        ...Layout.defaultProps,
+        setDefaultTheme={ThemeContext.ThemeProvider()}
+    }}
   >
-    { (args) => < Content  {...args} /> }
+    { (args) => < Layout  {...args} /> }
   </Story>
 </Canvas>
 
-<ArgsTable of={ Content } />
+<ArgsTable of={ Layout } />

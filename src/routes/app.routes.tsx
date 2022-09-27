@@ -19,7 +19,6 @@ interface Props{
 
 
 const AppRoutes: React.FC<Props> = ({setDefaultTheme}) => {
-  const root = ThemeContext.ThemeProvider();
   return (
     <Layout alterTheme={setDefaultTheme}>
     <BrowserRouter>
