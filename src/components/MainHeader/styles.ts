@@ -11,7 +11,7 @@ export const Container  = styled.div`
     text-align: right;
     padding: 0.9rem;
     border-bottom: 1px solid ${props =>props.theme.colors.gray};
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow: 15px 15px 10px gray;
 @media screen and (max-width: 40em) {
     //adicionar o stylo responsivo
 }

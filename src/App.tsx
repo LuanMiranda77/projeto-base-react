@@ -2,6 +2,7 @@ import { GlobalStyle } from "./styles/globalStyle";
 import Routes from "./routes/index";
 import {ThemeProvider} from 'styled-components';
 import {ThemeContext} from './hooks/theme';
+import  './styles/global.css';
 
 
 function App() {
