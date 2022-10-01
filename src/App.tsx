@@ -3,6 +3,7 @@ import Routes from "./routes/index";
 import {ThemeProvider} from 'styled-components';
 import {ThemeContext} from './hooks/theme';
 import  './styles/global.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {

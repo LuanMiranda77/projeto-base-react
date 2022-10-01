@@ -10,7 +10,7 @@ interface ButtonBaseProps extends ButtonHTMLAttributes<HTMLButtonElement>{
 
 export const ButtonBase: React.FC< ButtonBaseProps> = (props) => {
   return <Container>
-            <button id={props.label} name={props.label} className={props.model+" "+(props.className ? props.className:'btn_base')+" "+(props.size ? props.size:'large')}>{props.label}</button>
+            <button id={props.label} name={props.label} className={props.model+" "+(props.className ? props.className:'btn_base')+" "+(props.size ? props.size:'large')} onClick={props.onClick}>{props.label}</button>
          </Container>;
 }
 

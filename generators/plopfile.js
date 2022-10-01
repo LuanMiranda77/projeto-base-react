@@ -88,6 +88,12 @@ module.exports = (plop) => {
         path: '../src/components/{{pascalCase (getName name)}}/{{lowerCase (getName name)}}.stories.mdx',
         templateFile: 'templates/stories-page.ts.hbs',
       },
+      {
+        type: 'append',
+        path: '../src/components/index.tsx',
+        pattern: '//export default',
+        templateFile: 'templates/addImportIndex.tsx.hbs',
+      },
       '--------------------------------------------------',
       '🤲 Componente gerando com sucesso! Luan é foda 🤲',
       '--------------------------------------------------',

@@ -1,13 +1,25 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Container } from "./styles";
-import { Logo, InputBase, ButtonBase } from "../../../../components";
-
+import {
+  Logo,
+  InputBase,
+  ButtonBase,
+  ToastDefault,
+  DialogPoupDefault,
+} from "../../../../components";
+import { toast } from "react-toastify";
 /**
  *@Author
  *@Issue
  */
 
 function RecuperaSenha() {
+  toast.success("w");
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  const f = () => {
+    setOpenModal(true);
+    console.log(openModal);
+  };
   return (
     <Container>
       <div className="card-local flex justify-center text-center">
@@ -29,7 +41,9 @@ function RecuperaSenha() {
               label="Recuperar senha"
               className="black-color my-5"
               size="small"
+              onClick={f}
             />
+            <button onClick={f}>teste</button>
           </div>
           <div>
             <small className="p-4 text-gray-400 text-sm text-xl">
@@ -39,6 +53,15 @@ function RecuperaSenha() {
           </div>
         </div>
       </div>
+      {/* <ToastDefault/> */}
+      <DialogPoupDefault
+        title="Aviso"
+        isOpen={openModal}
+        children={<label>Tem certeza isso ?</label>}
+        onRequestClose={() => setOpenModal(false)}
+        onClickSim={() => setOpenModal(false)}
+        onClickNao={() => setOpenModal(false)}
+      />
     </Container>
   );
 }
