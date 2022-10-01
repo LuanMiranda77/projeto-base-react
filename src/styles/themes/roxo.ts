@@ -9,6 +9,8 @@ export default{
 
         background:'#dedee0',
 
+        textLabel: '#FFF',
+
         white: '#FFF',
         black: '#1C1C1C',
         gray: '#D2D2D2',

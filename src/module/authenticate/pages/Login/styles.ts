@@ -26,12 +26,11 @@ export const Container = styled.header`
     margin-top: 2rem;
     text-align: center;
     margin-bottom:  2rem ;
-    color: var(--text-title);
+    color: ${color => color.theme.colors.primary};
     /* padding: 3 1rem 10rem; */
    }
 
    .div-left{
-      background: var(--bacground);
       align-items: center;
       margin-top: 3%;
       width:50%;
@@ -41,7 +40,7 @@ export const Container = styled.header`
    }
 
    .div-right{
-      background: var(--primary);
+      background: ${color => color.theme.colors.primary};
       align-items: center;
       text-align: center;
       color: white;
@@ -83,7 +82,7 @@ export const Container = styled.header`
 
 
       .cadastro{
-        color:var(--green);
+        color:${color => color.theme.colors.success};;
         margin-right:39%;
 
         
@@ -94,7 +93,7 @@ export const Container = styled.header`
       }
 
       .esquece{
-        color:var(--secondary);
+        color:${color => color.theme.colors.secondary};
         width: 120%;
       }
 

@@ -7,7 +7,9 @@ export default{
         secondary:'#1a7aad',
         tertiary:'#20aed8',
 
-        background:'#FFF',
+        background:'#fff',
+
+        textLabel: '#FFF',
 
         white: '#FFF',
         black: '#1C1C1C',

@@ -1,10 +1,11 @@
-import React, { useContext, useState } from "react";
-import { Container } from "./styles";
+import React, { useContext } from "react";
+import { IoClose } from "react-icons/io5";
 import Modal from "react-modal";
 import { ThemeContext } from "styled-components";
-import { IoClose } from "react-icons/io5";
+import { ButtonBase } from "../../Buttons/ButtonBase";
+import { Container } from "./styles";
 
-interface DialogPoupDefaultProps {
+interface DialogPoupInfoProps {
   //adicionar os props
   title: string;
   isOpen: boolean;
@@ -12,7 +13,7 @@ interface DialogPoupDefaultProps {
   onRequestClose: () => void;
 }
 
-export const DialogPoupDefault: React.FC<DialogPoupDefaultProps> = (props) => {
+export const DialogPoupInfo: React.FC<DialogPoupInfoProps> = (props) => {
   const { colors } = useContext(ThemeContext);
   return (
     <Container>
@@ -61,6 +62,15 @@ export const DialogPoupDefault: React.FC<DialogPoupDefaultProps> = (props) => {
         </div>
         <div className="w-full p-2" style={{ marginTop: "10px" }}>
           <div className="w-full h-20 text-center">{props.children}</div>
+          <div className="w-full text-center">
+            <ButtonBase
+              label="OK"
+              model="btn_base"
+              className="tertiary-color mr-5 p-2"
+              size="mini"
+              onClick={props.onRequestClose}
+            />
+          </div>
         </div>
       </Modal>
     </Container>

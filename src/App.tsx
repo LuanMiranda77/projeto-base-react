@@ -4,6 +4,9 @@ import {ThemeProvider} from 'styled-components';
 import {ThemeContext} from './hooks/theme';
 import  './styles/global.css';
 import 'react-toastify/dist/ReactToastify.css';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
 
 
 function App() {

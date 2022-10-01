@@ -1,4 +1,7 @@
 //export default
+export { Summary } from './Summary';
+export { DialogPoupInfo } from './DialogPoup/DialogPoupInfo';
+export { DialogPoupConfirme } from './DialogPoup/DialogPoupConfirme';
 export { ModalDefault } from './ModalDefault';
 export { DialogPoupDefault } from './DialogPoup/DialogPoupDefault';
 export { ToastDefault } from './ToastDefault';

@@ -3,16 +3,17 @@ import { Container } from "./styles";
 import Modal from "react-modal";
 import { ThemeContext } from "styled-components";
 import { IoClose } from "react-icons/io5";
-
-interface DialogPoupDefaultProps {
+import { ButtonBase } from "../../Buttons/ButtonBase";
+interface DialogPoupConfirmeProps {
   //adicionar os props
-  title: string;
+  title: "Aviso" | "Confirme";
   isOpen: boolean;
   children?: React.ReactNode;
   onRequestClose: () => void;
+  onClickSim: () => void;
 }
 
-export const DialogPoupDefault: React.FC<DialogPoupDefaultProps> = (props) => {
+export const DialogPoupConfirme: React.FC<DialogPoupConfirmeProps> = (props) => {
   const { colors } = useContext(ThemeContext);
   return (
     <Container>
@@ -33,7 +34,6 @@ export const DialogPoupDefault: React.FC<DialogPoupDefaultProps> = (props) => {
             backgroundColor: colors.background,
           },
         }}
-        // closeTimeoutMS={800}
         contentElement={(props, children) => <div {...props}>{children}</div>}
         onRequestClose={() => props.onRequestClose}
       >
@@ -57,10 +57,26 @@ export const DialogPoupDefault: React.FC<DialogPoupDefaultProps> = (props) => {
             title={'sqdq'}
             size={'22px'}
           /> 
-         
         </div>
-        <div className="w-full p-2" style={{ marginTop: "10px" }}>
-          <div className="w-full h-20 text-center">{props.children}</div>
+        <div className="w-full p-1">
+          <div className="w-full p-2 h-20 text-center">{props.children}</div>
+          <div className="w-full p-2 grid grid-cols-2 gap-2 text-center">
+            <ButtonBase
+              label="Sim"
+              model="btn_base"
+              className="tertiary-color ml-20"
+              size="small"
+              onClick={props.onClickSim}
+            />
+            <ButtonBase
+              label="Não"
+              model="btn_base"
+              className="red-color mr-20"
+              size="small"
+              style={{ marginLeft: "50px" }}
+              onClick={props.onRequestClose}
+            />
+          </div>
         </div>
       </Modal>
     </Container>

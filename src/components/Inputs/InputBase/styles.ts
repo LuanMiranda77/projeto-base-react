@@ -15,7 +15,7 @@ export const Container  = styled.div`
     background: pink;
     white-space: nowrap;
     transform: translate(0, 0);
-    color: var(--text-title);
+    color: ${color => color.theme.colors.black};;
     transform-origin: 0 0;
     background: var(--white);
     transition: transform 120ms ease-in;
@@ -26,7 +26,7 @@ export const Container  = styled.div`
     box-sizing: border-box;
     display: block;
     width: 100%;
-    border: 2px solid var(--primary);
+    border: 2px solid ${color => color.theme.colors.primary};;
     padding: calc(.5em * 1.5) .5em;
     color: currentColor;
     background: transparent;
@@ -36,7 +36,7 @@ export const Container  = styled.div`
     &:not(:placeholder-shown) {
       & + .input_super__label  {
         transform: translate(.25rem, -65%) scale(.8);
-        color: var(--primary);
+        color: ${color => color.theme.colors.primary};;
       }
     }
   }
@@ -54,10 +54,10 @@ export const Container  = styled.div`
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid var(--primary);
+  border-bottom: 2px solid ${color => color.theme.colors.primary};;
   outline: 0;
   /* font-size: 1.3rem; */
-  color: var(--text-title);
+  color: ${color => color.theme.colors.black};;
   padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;
@@ -79,7 +79,7 @@ export const Container  = styled.div`
   display: block;
   transition: 0.2s;
   font-size: 1rem;
-  color: var(--text-title);
+  color: ${color => color.theme.colors.black};;
 }
 
 .input_line__field:focus {
@@ -89,13 +89,13 @@ export const Container  = styled.div`
     display: block;
     transition: 0.2s;
     font-size: 1rem;
-    color: var(--primary);
+    color: ${color => color.theme.colors.primary};;
     font-weight:700;    
   }
   padding-bottom: 6px;  
   font-weight: 700;
   border-width: 3px;
-  border-image: linear-gradient(to right, var(--primary),var(--secondary));
+  border-image: linear-gradient(to right, ${color => color.theme.colors.primary},${color => color.theme.colors.secondary});
   border-image-slice: 1;
 }
 /* reset input */
@@ -128,7 +128,7 @@ export const Container  = styled.div`
     margin: calc(.4em * 0.75 - 25px) calc(.4em * .5);
     white-space: nowrap;
     transform: translate(0, 0);
-    color: var(--text-title);
+    color: ${color => color.theme.colors.black};;
     transform-origin: 0 0;
     transition: transform 120ms ease-in;
     font-weight: bold;
@@ -144,20 +144,20 @@ export const Container  = styled.div`
     font-family: inherit;
     border-radius: 6px;
     -webkit-appearance: none;
-    color: var(--text-title);
-    border: 2px solid var(--primary);
+    color: ${color => color.theme.colors.black};;
+    border: 2px solid ${color => color.theme.colors.primary};;
     background: var(--background);
     transition: border .3s ease;
     
     &::placeholder {
-        color: var(--text-title);
+        color: ${color => color.theme.colors.black};;
     }
     &:focus {
         outline: none;
-        border-color: var(--secondary);
+        border-color: ${color => color.theme.colors.secondary};
         & + .input_base__label  {
         /* transform: translate(.25rem, -65%) scale(.8); */
-        color: var(--secondary);
+        color: ${color => color.theme.colors.secondary};
       }
     }
 

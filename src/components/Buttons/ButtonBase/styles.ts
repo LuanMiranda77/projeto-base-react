@@ -3,32 +3,32 @@ import styled from "styled-components";
 export const Container  = styled.div`
  //adicionar stylos
   .primary-color{
-      background-color: var(--primary);
-      border: 2px solid var(--primary);
+      background-color: ${color => color.theme.colors.primary};
+      border: 2px solid ${color => color.theme.colors.primary};
   }
   .secondary-color{
-      background-color: var(--secondary);
-      border: 2px solid var(--secondary);
+      background-color: ${color => color.theme.colors.secondary};
+      border: 2px solid ${color => color.theme.colors.secondary};
   }
-  .basic-color{
-      background-color: var(--basic-color);
-      border: 2px solid var(--basic-color);
+  .tertiary-color{
+      background-color: ${color => color.theme.colors.tertiary};
+      border: 2px solid ${color => color.theme.colors.tertiary};
   }
   .green-color{
-      background-color: var(--green);
-      border: 2px solid var(--green);
+      background-color: ${color => color.theme.colors.success};
+      border: 2px solid ${color => color.theme.colors.success};
   }
   .red-color{
-      background-color: var(--red);
-      border: 2px solid var(--red);
+      background-color: ${color => color.theme.colors.error};;
+      border: 2px solid ${color => color.theme.colors.error};;
   }
   .blue-color{
-      background-color: var(--blue);
-      border: 2px solid var(--blue);
+      background-color: ${color => color.theme.colors.info};
+      border: 2px solid ${color => color.theme.colors.info};
   }
   .black-color{
-      background-color: var(--black);
-      border: 2px solid var(--black);
+      background-color: ${color => color.theme.colors.black};;
+      border: 2px solid ${color => color.theme.colors.black};;
   }
 
   .large{
@@ -47,9 +47,7 @@ export const Container  = styled.div`
  //button-hover
  .btn_base {
   height: var(--max-height-button);
-  /* background-color: var(--primary); */
-  cursor: pointer;
-  color: var(--white);
+  color: var(--text-label);
   transition: all 0.3s;
   position: relative;
   font-weight: bold;
@@ -82,12 +80,12 @@ export const Container  = styled.div`
 
 /* CSS */
 .btn_super {
+  color: var(--text-label);
   height: var(--max-height-button);
   border: 10;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   box-sizing: border-box;
-  color: #FFFFFF;
   padding: 3px;
   text-decoration: none;
   user-select: none;

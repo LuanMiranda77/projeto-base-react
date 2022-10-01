@@ -4,19 +4,9 @@ export const GlobalStyle = createGlobalStyle`
 :root{
   //variaveis do tema de cores
   --background: #1C1C1C;
-  --primary: #62A9A5;
-  --secondary: #F47C1A;
-  --basic-color:#4B0082;
-  --green: #1ABC9C;
-  --red: #E74C3C;
-  --white: #FFFFFF;
-  --blue:#2C73D2;
-  --black:#1C1C1C;
-
-  //variaveis de textos
-  --text-title: #949494;
-  --text-label: #A9A9A9;
-  --text-label-black: #1C1C1C;
+  --white: #FFF;
+  --text-label: #fff;
+ 
 
 
   //variaveis de tamanho
@@ -78,7 +68,6 @@ button {
   background: var(--white);
   margin: 2%;
   border-radius: 5px;
-  padding:1rem;
 }
 
 .react-modal-content{

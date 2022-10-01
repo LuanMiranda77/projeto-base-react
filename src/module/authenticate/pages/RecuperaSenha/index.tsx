@@ -5,7 +5,11 @@ import {
   InputBase,
   ButtonBase,
   ToastDefault,
+  DialogPoupConfirme,
+  DialogPoupInfo,
   DialogPoupDefault,
+  ModalDefault,
+  Summary,
 } from "../../../../components";
 import { toast } from "react-toastify";
 /**
@@ -16,13 +20,23 @@ import { toast } from "react-toastify";
 function RecuperaSenha() {
   toast.success("w");
   const [openModal, setOpenModal] = useState<boolean>(false);
-  const f = () => {
+  const open = () => {
     setOpenModal(true);
-    console.log(openModal);
   };
+
+  const close = () => {
+    setOpenModal(false);
+  };
+
+  const body = (
+    <div>
+      <label htmlFor="">Dados pessoasi</label>
+    </div>
+  );
+  
   return (
     <Container>
-      <div className="card-local flex justify-center text-center">
+      <div className="card-local p-5 flex justify-center text-center">
         <div className="">
           <Logo size="MEDIUM" />
           <br />
@@ -41,9 +55,8 @@ function RecuperaSenha() {
               label="Recuperar senha"
               className="black-color my-5"
               size="small"
-              onClick={f}
+              onClick={open}
             />
-            <button onClick={f}>teste</button>
           </div>
           <div>
             <small className="p-4 text-gray-400 text-sm text-xl">
@@ -52,16 +65,15 @@ function RecuperaSenha() {
             </small>
           </div>
         </div>
+        
       </div>
       {/* <ToastDefault/> */}
-      <DialogPoupDefault
+      <ModalDefault
         title="Aviso"
         isOpen={openModal}
-        children={<label>Tem certeza isso ?</label>}
-        onRequestClose={() => setOpenModal(false)}
-        onClickSim={() => setOpenModal(false)}
-        onClickNao={() => setOpenModal(false)}
-      />
+        children={body}
+        onRequestClose={close}   
+        />
     </Container>
   );
 }
